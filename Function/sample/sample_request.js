@@ -1,8 +1,8 @@
 const fs = require('fs');
 const request = require('request');
 
-const fileName = 'test.png'
-const imageBuffer = fs.readFileSync(fileName);
+const fileName = 'test.png' /* modify your test_name here */
+const imageBuffer = fs.readFileSync(fileName); /* has to be base64 encoded string */
 
 const options = {
     uri: 'https://us-central1-what2cook-301906.cloudfunctions.net/Predict',
