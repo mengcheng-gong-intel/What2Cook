@@ -10,6 +10,13 @@ exports.What2CookFunction = (req, res) => {
 };
 
 exports.Predict = async (req, res) => {
-    const result = await predict(req.payload);
+    const result = await predict(req.body);
     res.status(200).send(result);
+};
+
+exports.Test = async (req, res) => {
+    console.log(req.body)
+    img64 = Buffer.from(req.body).toString('base64')
+    // res.status(200).send(img64);
+    res.status(200).send(req.body);
 };
