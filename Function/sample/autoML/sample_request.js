@@ -1,7 +1,7 @@
 const fs = require('fs');
 const request = require('request');
 
-const fileName = 'test_3.png' /* modify your test_name here */
+const fileName = 'test_4.png' /* modify your test_name here */
 const imageBuffer = fs.readFileSync(fileName); /* has to be base64 encoded string */
 
 const options = {

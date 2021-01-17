@@ -1,7 +1,7 @@
 from PIL import Image
 import os
 
-path = '../../../test'
+path = "../../../test"
 count = 0
 
 for file_name in os.listdir(path):
@@ -11,5 +11,5 @@ for file_name in os.listdir(path):
         # img = img.crop((left, top, right, bottom))
         img.thumbnail((400, 400), Image.ANTIALIAS)
         
-        img.save(f'{path}/m_{count}.png', 'png', quality=88, optimize=True)
+        img.save(f"{path}/m_{count}.png", "png", quality=88, optimize=True)
         count += 1
