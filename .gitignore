@@ -91,5 +91,6 @@ iOSInjectionProject/
 
 Function/node_modules/
 Function/.DS_Store
+Util/ServiceUtil/node_modules/
 
 .DS_Store
