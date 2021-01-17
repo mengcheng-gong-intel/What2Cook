@@ -1,3 +1,3 @@
 # Database Schema #
-This is the database schema diagram!
+Here is the diagram of our database schema.
 ![Database Schema](./img/DBSchema.png)

@@ -1,8 +1,7 @@
 
 ## Architecture
 
-
-
+We use GCP as our backend cloud server, including Function, AutoML Vision, Bucket Storage and Compute Engine (host of cockroach instance).
 Here is the illustration of our backend architecture.
 ![Backend Architecture](./image/What2Cook_be_architect.jpg)
 
