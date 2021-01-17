@@ -1,4 +1,14 @@
 # What2Cook
+
+<div align="center">
+ <img src="SampleImage/meals.jpg" alt="" align="right" style="float:right"/>
+ <img src="SampleImage/classification.jpg" alt="" align="left" style="float:left" />
+ <div id="content" align="center"> 
+     <img src="SampleImage/ingredients.jpg" alt="" align="center" />
+ </div>
+ </div>
+
+
 ## Introduction ##
 Terminator of food decidophobia
 
