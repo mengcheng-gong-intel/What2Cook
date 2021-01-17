@@ -1,6 +1,6 @@
 # What2Cook
 
-![alt](SampleImage/classification.jpg) | ![alt](SampleImage/ingredients.jpg) | ![alt](SampleImage/meals.jpg)
+![alt](SampleImage/cover.jpg)
 
 ## Introduction ##
 Terminator of food decidophobia
