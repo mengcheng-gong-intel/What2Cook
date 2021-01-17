@@ -14,8 +14,14 @@ exports.What2CookFunction = (req, res) => {
  * Send image to AutoML and return prediction
  */
 exports.Predict = async (req, res) => {
-    const result = await predict(req.body);
+    const img = req.body.image
+    const base64data = Buffer.from(img, 'base64');
+    const result = await predict(base64data);
     res.status(200).send(result);
+};
+
+exports.Return = async (req, res) => {
+    res.status(200).send(req.body);
 };
 
 /**
