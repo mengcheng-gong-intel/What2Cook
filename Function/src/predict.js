@@ -1,6 +1,6 @@
 const projectId = 'what2cook-301906';
 const location = 'us-central1';
-const modelId = 'ICN8688334285616185344';
+const modelId = 'ICN2836750994778357760';
 
 // Imports the Google Cloud AutoML library
 const {PredictionServiceClient} = require('@google-cloud/automl').v1;

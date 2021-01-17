@@ -1,9 +1,16 @@
 
 ## Architecture
 
+
+
+Here is the illustration of our backend architecture.
+![Backend Architecture](./image/What2Cook_be_architect.jpg)
+
+## Endpoints
+
 We open up several endpoints on GCP functions to handle the tasks of image classification and query database.
 
-Accept post request which contains the base64 encoding images:
+Accept post request which contains base64 encoding images as string in request.body.image:
 ```
 https://us-central1-what2cook-301906.cloudfunctions.net/Predict
 ```
@@ -17,9 +24,6 @@ Health check:
 ```
 https://us-central1-what2cook-301906.cloudfunctions.net/What2CookFunction
 ```
-
-Here is the illustration of our backend architecture.
-![Backend Architecture](./image/What2Cook_be_architect.jpg)
 
 ## Multi-label Image Classification
 

@@ -1,4 +1,5 @@
 const { predict } = require('./src/predict');
+const { query } = require('./src/query');
 const request = require('request');
 
 /**
@@ -11,7 +12,7 @@ exports.What2CookFunction = (req, res) => {
 };
 
 /**
- * Send image to AutoML and return prediction
+ * Send image to AutoML and return prediction.
  */
 exports.Predict = async (req, res) => {
     const img = req.body.image
@@ -20,12 +21,32 @@ exports.Predict = async (req, res) => {
     res.status(200).send(result);
 };
 
-exports.Return = async (req, res) => {
-    res.status(200).send(req.body);
+/**
+ * query the cockroach instance using thre classified labels.
+ */
+exports.Query = (req, res) => {
+    var materials = new Set(req.body.materials);
+    var toCook = [];
+    query(foods => {
+        for(var food of foods) {
+            food.id = Number(food.id);
+            var canCook = true;
+            for (var material of food['materials']) {
+                if (!materials.has(material)) {
+                    canCook = false;
+                }
+            }
+            if (canCook == true) {
+                toCook.push(food);
+            }
+
+        }
+        res.json(toCook);   
+    });
 };
 
 /**
- * Fetch image, return 7.52x7.52 inches jpg image
+ * Fetch image, return 7.52x7.52 inches jpg image.
  */
 exports.FetchImage = async (req, res) => {
     const path = req.body.imageUri;
@@ -45,7 +66,7 @@ exports.FetchImage = async (req, res) => {
 };
 
 /**
- * Test for local, run ./run.sh Test local
+ * Test for local, run ./run.sh Test local.
  */
 exports.Test = async (req, res) => {
     const path = 'https://storage.googleapis.com/what2cook/15130468796375440_460_380.jpg'
