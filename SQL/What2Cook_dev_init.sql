@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS Foods (
   food_id int UNIQUE NOT NULL,
   food_name varchar UNIQUE NOT NULL,
   foodcategory_id int,
-  createdate TIMESTAMPTZ(3),
+  createdate varchar(255),
   author_id int,
   img_url varchar(255) UNIQUE
 );
@@ -67,6 +67,10 @@ CREATE TABLE IF NOT EXISTS FoodIngredients (
   ingredient_id int NOT NULL
 );
 
+CREATE INDEX id_idx ON foodmaterials (food_id ASC);
+
+CREATE INDEX id_idx ON foodingredients (food_id ASC);
+
 ALTER TABLE FoodMaterials ADD FOREIGN KEY (food_id) REFERENCES Foods (food_id);
 
 ALTER TABLE FoodMaterials ADD FOREIGN KEY (material_id) REFERENCES Materials (material_id);
@@ -80,7 +84,3 @@ ALTER TABLE FoodIngredients ADD FOREIGN KEY (food_id) REFERENCES Foods (food_id)
 ALTER TABLE Foods ADD FOREIGN KEY (foodcategory_id) REFERENCES FoodCategories (foodcategory_id);
 
 ALTER TABLE Materials ADD FOREIGN KEY (materialcategory_id) REFERENCES MaterialCategories (materialcategory_id);
-
-CREATE INDEX id_idx ON foodmaterials (food_id ASC);
-
-CREATE INDEX id_idx ON foodingredients (food_id ASC);
