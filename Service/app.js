@@ -20,7 +20,7 @@ server.listen(port, hostname, () => {
 function dbCall() {
   var config = {
     user: 'root',
-    host: 'localhost',
+    host: '0.0.0.0',
     database: 'what2cook_dev',
     port: 26257,
     // ssl: {
