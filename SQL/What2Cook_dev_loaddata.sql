@@ -11,7 +11,7 @@ INSERT INTO what2cook_dev.Ingredients(id, ingredient_id, ingredient_name) VALUES
 INSERT INTO what2cook_dev.Materials(id, material_id, material_name, materialcategory_id) VALUES	(1, 1, 'Brocoli', 2), 
 																								(2, 2, 'Carrot', 2), 
 																								(3, 3, 'Cucumber', 2), 
-																								(4, 4,'Lettuc', 2), 
+																								(4, 4,'Lettuce', 2), 
 																								(5, 5, 'Onion', 2), 
 																								(6, 6, 'Potato', 2), 
 																								(7, 7, 'Tomato', 2), 
@@ -34,5 +34,5 @@ INSERT INTO what2cook_dev.Foods(id, food_id, food_name, foodcategory_id, created
 
 INSERT INTO what2cook_dev.Foods(id, food_id, food_name, foodcategory_id, createdate, author_id) VALUES 	(4, 4, 'Hearty Fall Soup', 2, '2021-01-13 11:30:00+00:00', 2), 
 																										(6, 6, 'Classic Meatball', 1, '2021-01-12 10:00:00+00:00', 1);
-INSERT INTO what2cook_dev.FoodMaterials(id, food_id, material_id) VALUES (1, 1, 9), (2, 2, 6), (3, 3, 11), (4, 3, 1), (5, 4, 9), (6, 4, 2), (7, 5, 4), (8, 6, 8), (9, 6, 5), (10, 6, 10), (11, 7, 3), (12, 7,5);
+INSERT INTO what2cook_dev.FoodMaterials(id, food_id, material_id) VALUES (1, 1, 9), (2, 2, 6), (3, 3, 11), (4, 3, 1), (5, 4, 9), (6, 4, 2), (7, 5, 4), (8, 6, 8), (9, 6, 5), (10, 6, 10), (11, 7, 3), (12, 7,5), (13, 8, 8), (14, 8, 6);
 INSERT INTO what2cook_dev.FoodIngredients(id, food_id, ingredient_id) VALUES (1, 3, 1), (2, 4, 2), (3, 5, 4), (4, 5, 5), (5, 6, 3);
