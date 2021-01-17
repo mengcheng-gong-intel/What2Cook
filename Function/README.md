@@ -18,6 +18,8 @@ Health check:
 https://us-central1-what2cook-301906.cloudfunctions.net/What2CookFunction
 ```
 
+Here is the illustration of our backend architecture.
+![Backend Architecture](./image/What2Cook_be_architect.jpg)
 
 ## Multi-label Image Classification
 
