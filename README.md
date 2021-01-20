@@ -15,6 +15,8 @@ During the pandemic, we usually buy lots of materials from the supermarket and k
 3. Users check if each material is correctly classified.
 4. Hit "What 2 Cook" button, the application would come up with food ideas!
 
+![demo](SampleImage/What2CookGif.gif)
+
 ## How we built it ##
 For the iOS client, we used Swift programming language and SwiftUI framework. We adopted many modern techniques like functional programming, declarative programming and reactive programming for the client application. To keep the app as simple as possible, we used many vanila iOS UI elements.
 
